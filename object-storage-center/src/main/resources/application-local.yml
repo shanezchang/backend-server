@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/backend-server
+    username: root
+    password: 123456
+
+logging:
+  config: classpath:log4j2.xml
+
+#schedule:
+#  getSkuInfoByChangeTime:
+#    cron: 0 0/50 * * * ?
+
+mybatis:
+  mapper-locations: classpath*:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
