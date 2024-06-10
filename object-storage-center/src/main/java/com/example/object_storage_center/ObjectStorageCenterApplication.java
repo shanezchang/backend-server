@@ -1,4 +1,4 @@
-package shane.chang.objectstoragecenter;
+package com.example.object_storage_center;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
