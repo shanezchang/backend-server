@@ -47,7 +47,8 @@ public class ObjectController {
     @PostMapping("/upload_object")
     public ResponseDTO<Object> uploadObject(@RequestPart MultipartFile file) {
         log.info("invoke upload_object, req: {}", file);
-        log.info("{} - {} - {}", file.getContentType(), file.getContentType(), file.getOriginalFilename());
+        log.info("{} - {} - {} - {}", file.getContentType(), file.getName(), file.getOriginalFilename(), file.getSize());
+//        2024-06-11 00:47:40.360 - [http-nio-9999-exec-1] INFO  com.example.object_storage_center.controller.ObjectController - image/jpeg - file - Dingtalk_20240611003046.jpg - 6456
         try {
             String a = Base64.getEncoder().encodeToString(file.getBytes());
             log.info(a);
