@@ -14,6 +14,8 @@ public class ObjectStorageEntity {
 
     private Integer suffix;
 
+    private String dataName;
+
     private Long dataSize;
 
     private String dataString;

@@ -1,8 +1,10 @@
 package com.example.object_storage_center.service.impl;
 
 import com.example.object_storage_center.service.IObjectService;
+import com.example.object_storage_center.util.StringUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
+
 
 @Service
 @Slf4j
@@ -19,6 +21,10 @@ public class ObjectService implements IObjectService {
     }
 
     public static void main(String[] args) {
-
+        log.info(StringUtil.getRandomString());
+        log.info(StringUtil.getRandomString());
+        log.info(StringUtil.getRandomString());
+        log.info(StringUtil.getRandomString());
+        log.info(StringUtil.getRandomString());
     }
 }
