@@ -1,7 +1,7 @@
 package com.example.object_storage_center.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.example.object_storage_center.entity.ObjectStorageEntity;
+import com.example.object_storage_center.model.entity.ObjectStorageEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

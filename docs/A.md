@@ -12,17 +12,25 @@ docker run -dit \
 -- auto-generated definition
 create table t_object_storage
 (
-    id          bigint unsigned auto_increment
+    id                 bigint unsigned auto_increment
         primary key,
-    suffix      tinyint unsigned  not null,
-    data_name   varchar(32)       not null,
-    data_size   bigint unsigned   not null,
-    data_string text              not null,
-    delete_flag tinyint default 0 not null,
-    create_time bigint unsigned   not null,
-    update_time bigint unsigned   not null
+    filename           varchar(32)                 not null,
+    filename_extension varchar(8)                  null,
+    filename_original  varchar(32)                 null,
+    content_type       varchar(16)                 null,
+    byte_size          bigint unsigned             null,
+    encode_text        text                        null,
+    visit_times        bigint unsigned default '0' not null,
+    delete_flag        tinyint         default 0   not null,
+    create_time        bigint unsigned             not null,
+    update_time        bigint unsigned             not null,
+    constraint t_object_storage_pk
+        unique (filename)
 )
     comment '对象存储数据表';
+
+
+
 
 
 -- auto-generated definition

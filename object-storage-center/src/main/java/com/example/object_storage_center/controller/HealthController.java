@@ -1,6 +1,6 @@
 package com.example.object_storage_center.controller;
 
-import com.example.object_storage_center.dto.ResponseDTO;
+import com.example.object_storage_center.model.dto.ResponseDTO;
 import com.example.object_storage_center.util.ResponseUtil;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;

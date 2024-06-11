@@ -1,4 +1,4 @@
-package com.example.object_storage_center.dto;
+package com.example.object_storage_center.model.dto;
 
 import com.alibaba.fastjson2.JSONObject;
 import io.swagger.v3.oas.annotations.media.Schema;
