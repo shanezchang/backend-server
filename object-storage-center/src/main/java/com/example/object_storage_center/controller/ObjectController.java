@@ -5,12 +5,10 @@ import com.example.object_storage_center.service.IObjectService;
 import com.example.object_storage_center.util.ResponseUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.Base64;
 
 @RestController
 @RequestMapping("/object")
@@ -21,13 +19,6 @@ public class ObjectController {
 
     public ObjectController(IObjectService objectService) {
         this.objectService = objectService;
-    }
-
-    @GetMapping("/get_object")
-    public ResponseDTO<Object> getObject(@RequestParam Long id) {
-        log.info("invoke get_object, req: {}", id);
-        objectService.getObject(id);
-        return ResponseUtil.success();
     }
 
     @GetMapping("/show_object")

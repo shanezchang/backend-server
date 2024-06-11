@@ -95,9 +95,4 @@ public class ObjectService implements IObjectService {
         }
     }
 
-    @Override
-    public void getObject(Long objectId) {
-        throw new RuntimeException("error msg shane");
-    }
-
 }
