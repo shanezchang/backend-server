@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: notify-center
+  mail:
+    host: smtp.qq.com
+    port: 465
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+          ssl:
+            trust: smtp.qq.com
