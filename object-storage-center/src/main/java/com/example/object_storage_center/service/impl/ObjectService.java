@@ -6,12 +6,13 @@ import com.example.object_storage_center.constant.consist.CommonConsist;
 import com.example.object_storage_center.constant.enums.DeleteFlagEnum;
 import com.example.object_storage_center.mapper.ObjectStorageMapper;
 import com.example.object_storage_center.model.entity.ObjectStorageEntity;
-import com.example.object_storage_center.service.IObjectService;
+import com.example.object_storage_center.service.intf.IObjectService;
 import com.example.object_storage_center.util.StringUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.util.StringUtils;
@@ -23,6 +24,7 @@ import java.util.Base64;
 
 @Service
 @Slf4j
+@RefreshScope
 public class ObjectService implements IObjectService {
 
     @Value(value = "${serviceMachine.host}")

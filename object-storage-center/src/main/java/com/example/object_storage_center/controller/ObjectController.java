@@ -1,7 +1,7 @@
 package com.example.object_storage_center.controller;
 
 import com.example.object_storage_center.model.dto.ResponseDTO;
-import com.example.object_storage_center.service.IObjectService;
+import com.example.object_storage_center.service.intf.IObjectService;
 import com.example.object_storage_center.util.ResponseUtil;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;

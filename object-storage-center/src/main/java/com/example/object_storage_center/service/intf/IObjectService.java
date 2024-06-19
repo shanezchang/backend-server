@@ -1,4 +1,4 @@
-package com.example.object_storage_center.service;
+package com.example.object_storage_center.service.intf;
 
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.web.multipart.MultipartFile;
