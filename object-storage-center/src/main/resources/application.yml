@@ -11,7 +11,7 @@ spring:
       discovery:
         server-addr: ${NACOS_HOST:localhost:8848}
         group: ${NACOS_GROUP:DEFAULT_GROUP}
-        namespace: ${NAME_SPACE}
+        namespace: ${NAME_SPACE:public}
       config:
         server-addr: ${spring.cloud.nacos.discovery.server-addr}
         group: ${spring.cloud.nacos.discovery.group}
