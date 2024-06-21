@@ -1,4 +1,4 @@
-package com.example.notify_center;
+package com.example.user_center;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -8,10 +8,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableFeignClients
-public class NotifyCenterApplication {
+public class UserCenterApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(NotifyCenterApplication.class, args);
+		SpringApplication.run(UserCenterApplication.class, args);
 	}
 
 }

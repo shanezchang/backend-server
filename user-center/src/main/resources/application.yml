@@ -1,9 +1,9 @@
 server:
-  port: 9992
+  port: 9991
 
 spring:
   application:
-    name: notify-center
+    name: user-center
   cloud:
     nacos:
       username: ${NACOS_USERNAME:nacos}
@@ -19,4 +19,4 @@ spring:
   config:
     import:
       - optional:nacos:base-config.yml
-      - optional:nacos:notify-center.yml
+      - optional:nacos:user-center.yml
