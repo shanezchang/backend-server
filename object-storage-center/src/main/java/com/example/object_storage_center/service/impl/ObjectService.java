@@ -27,11 +27,11 @@ import java.util.Base64;
 @RefreshScope
 public class ObjectService implements IObjectService {
 
-    @Value(value = "${serviceMachine.host}")
-    private String urlHost;
+    @Value(value = "${config.prefix}")
+    private String urlPrefix;
 
-    @Value(value = "${serviceMachine.port}")
-    private String urlPort;
+    @Value(value = "${config.limitSize}")
+    private Integer limitSize;
 
     private final ObjectStorageMapper objectStorageMapper;
 
@@ -47,7 +47,7 @@ public class ObjectService implements IObjectService {
         try {
             String filename = StringUtil.getRandomString();
             String filenameExtension = StringUtils.getFilenameExtension(file.getOriginalFilename());
-            String url = urlHost + ":" + urlPort + "/" + "object/show_object?filename=" + filename + "." + filenameExtension;
+            String url = urlPrefix + "/object/show_object?filename=" + filename + "." + filenameExtension;
             this.objectStorageMapper.insert(ObjectStorageEntity.builder()
                     .filename(filename)
                     .filenameExtension(filenameExtension)
@@ -92,7 +92,7 @@ public class ObjectService implements IObjectService {
     }
 
     private void validateUploadObject(MultipartFile file) {
-        if (file.getSize() > CommonConsist.OneMbSize * 8) {
+        if (file.getSize() > CommonConsist.OneMbSize * limitSize) {
             throw new BusinessException("object size is too large");
         }
     }
