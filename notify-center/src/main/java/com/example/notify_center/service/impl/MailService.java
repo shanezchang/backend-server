@@ -6,12 +6,14 @@ import com.example.notify_center.mapper.MailSendLogMapper;
 import com.example.notify_center.model.entity.MailSendLogEntity;
 import com.example.notify_center.service.intf.IMailService;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 @Service
+@RefreshScope
 public class MailService implements IMailService {
 
     @Value("${spring.mail.username}")
